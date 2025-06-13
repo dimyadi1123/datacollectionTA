@@ -48,7 +48,7 @@ if geo_response.status_code == 200:
             if 'list' in air_pollution_data and air_pollution_data['list']:
                 # Menyimpan data ke dalam CSV
                 df = pd.json_normalize(air_pollution_data['list'])  # Memindahkan data JSON ke DataFrame
-                df.to_csv('airpollution_surabaya2024.csv', index=False)      # Menyimpan ke CSV
+                df.to_csv('data_polusi_sby_2024.csv', index=False)      # Menyimpan ke CSV
                 print("Data berhasil disimpan ke 'airpollution_surabaya2024.csv'")
             else:
                 print("Tidak ada data polusi udara yang tersedia dalam rentang waktu tersebut.")
